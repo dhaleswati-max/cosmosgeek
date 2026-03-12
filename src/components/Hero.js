@@ -60,18 +60,11 @@ const [yesterday, setYesterday]= useState(0);
   {/* LCP Image */}
   <Box
     component="img"
-    src={imagenew_720} // default fallback
-  srcSet={`
-    ${imagenew_400} 400w,
-    ${imagenew_720} 720w,
-    ${imagenew_1200} 1200w
-  `}
-  sizes="(max-width: 600px) 100vw,
-         (max-width: 900px) 100vw,
-         100vw"
-  alt="Background Image"
-   loading="eager"
-  fetchpriority="high"
+ src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009827/imagenew_gcpefb.webp"
+    alt=""
+    loading="eager"
+    fetchpriority="high"
+ 
 
     sx={{
       position: "absolute",

@@ -8,33 +8,30 @@ import {
 } from "@mui/material";
 
 
-
-
-
 const services = [
   {
     title: "Web Development",
-    image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772008667/card2_b59sil.webp",
+    image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/f_auto,q_auto,w_800/v1772008667/card2_b59sil.webp",
   },
   {
     title: "Digital Marketing",
-    image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772008689/card6_onfbmg.webp",
+    image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/f_auto,q_auto,w_800/v1772008689/card6_onfbmg.webp",
   },
   {
     title: "Mobile App Development",
-    image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772008684/card4_i4pk8e.webp",
+    image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/f_auto,q_auto,w_800/v1772008684/card4_i4pk8e.webp",
   },
   {
     title: "ERP Software",
-    image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772008672/card1_kdrm5h.webp",
+    image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/f_auto,q_auto,w_800/v1772008672/card1_kdrm5h.webp",
   },
   {
     title: "Custom Software Development",
-    image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772008680/card5_kbcg8m.webp",
+    image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/f_auto,q_auto,w_800/v1772008680/card5_kbcg8m.webp",
   },
   {
     title: "Billing Software",
-    image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772008667/card3_dcveyy.webp",
+    image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/f_auto,q_auto,w_800/v1772008667/card3_dcveyy.webp",
   },
 ];
 

@@ -22,7 +22,7 @@ const generateBotResponce = async (history) => {
   };
 
   const formattedHistory = history.map(({ role, text }) => ({
-    role: role === "model" ? "assistant" : "user",
+    role: role === "model" ? "model" : "user",
     parts: [{ text }],
   }));
 

@@ -12,51 +12,41 @@ import sahil from '../Assets/Images/sahil.webp';
 import anagha from '../Assets/Images/anagha.webp';
 
 
-const TEAM ={
-  anushka :'https://cosmosdigital.in/static/media/anushka.cdfa3f8f99a2a4c95b08.webp',
-   anshu :'https://cosmosdigital.in/static/media/anshu.53b385e00b36d6c203df.webp',
- asmita:'https://cosmosdigital.in/static/media/asmita.dfbad2253a2862ed363d.webp',
- swati : 'https://cosmosdigital.in/static/media/swati.8a03de1ee6d717aae1ea.webp',
- arjun : 'https://cosmosdigital.in/static/media/arjun.22da1ba1f8e95dc2a0c4.webp',
- rishi: rishi
-}
 const team = [
-    {
-    name: "Anushka parate",
-    role: "HR",
-   
-    image: TEAM.anushka
-  },
-  
-  
   {
-    name: "Anush Pise",
-    role: "Software Developer",
-    image: TEAM.anshu
+    name: "Anushka Parate",
+    role: "HR",
+    image: anushka,
+   
   },
- {
+  {
+    name: "Anshu Pise",
+    role: "Software Developer",
+    image: anshu,
+  },
+  {
     name: "Asmita Kukreja",
     role: "Frontend Developer",
-    image: TEAM.asmita
+    image: asmita,
   },
   {
     name: "Swati Dhale",
     role: "Software Tester",
-    
-    image: TEAM.swati
+    image: swati,
+   
   },
   {
     name: "Arjun Gupta",
     role: "Software Developer",
-    image: TEAM.arjun
+    image: arjun,
+    
   },
-
   {
     name: "Rishi Joshi",
-    role: "Android Developer", 
-    image: TEAM.rishi
+    role: "Android Developer",
+    image: rishi,
+   
   },
- 
   
 ];
 
@@ -72,48 +62,43 @@ const Aboutexpert = () => (
       Meet the talented professionals behind our successful projects.
     </Typography>
     {/*expert card*/}
-    <Grid container spacing={2} justifyContent="center">
+    <Grid container spacing={4} justifyContent="center" sx={{ px: 2 }}>
       {team.map((member, idx) => (
-        <Grid item xs={12} sm={6} md={4} key={idx}>
+        <Grid item xs={12} sm={6} md={4} key={idx} sx={{ display: "flex", justifyContent: "center" }}>
           <Card 
           sx={{ bgcolor: "white",
            color: "black",
-           height:360,
-           width:300 ,
-           mx:"auto" ,
-           border:"1px solid white",
-           borderRadius:"20px"}}>
+           height: 400,
+           width: 300,
+           border:"1px solid #eee",
+           borderRadius:"20px",
+           transition: "transform 0.3s ease",
+           "&:hover": { transform: "translateY(-5px)" },
+           display: "flex",
+           flexDirection: "column"
+           }}>
             <CardMedia
               component="img"
               image={member.image}
               alt={member.name}
-              sx={{ width:"100%",height:270,
-                 objectFit: "contain" ,
-                display:"block"}}
+              loading="lazy"
+              decoding="async"
+              sx={{ width:"100%", height: 270,
+                 objectFit: "contain",
+                 bgcolor: "#f9f9f9"
+              }}
             />
-            <CardContent>
-              <Typography variant="h6">{member.name}</Typography>
+            <CardContent sx={{ textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>{member.name}</Typography>
               <Typography variant="subtitle2" sx={{ color: "#4169E1" }}>
                 {member.role}
               </Typography>
-              <Typography variant="body2" sx={{ mt: 1 }} component="div">
-  <span dangerouslySetInnerHTML={{ __html: member.experience }} />
-</Typography>
-
-              {/* <Typography variant="body2" sx={{ mt: 1 }}>
-                {member.experience}
-              </Typography> */}
-
-             
-
             </CardContent>
           </Card>
         </Grid>
       ))}
     </Grid>
   </div>
-
-  
 );
 
 export default Aboutexpert;

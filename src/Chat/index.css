@@ -91,9 +91,6 @@ font-weight: 600;
 }
 .chat-header button{
     position: relative;
-    top:-440px;
-  
-
     height: 40px;
     width: 40px;
     border: none;

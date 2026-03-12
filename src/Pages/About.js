@@ -74,7 +74,7 @@ const About = () => {
   {/* LCP Image */}
   <Box
     component="img"
-    src="https://cosmosdigital.in/static/media/imagenew.add581917f048947874f.webp"
+    src={imagenew}
     alt=""
     loading="eager"
     fetchpriority="high"

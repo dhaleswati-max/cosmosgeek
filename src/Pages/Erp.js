@@ -19,8 +19,10 @@ export default function ErpSolution() {
         {/* HERO IMAGE */}
         <Box
           component="img"
-          src="https://www.cosmosdigital.in/static/media/erp.e1b5bf9fde77ae85b514.png"
+          src="/static/media/erp.e1b5bf9fde77ae85b514.png"
           alt="ERP Solution"
+          loading="lazy"
+          decoding="async"
           sx={{
             width: "100%",
             height: { xs: 180, md: 260 },

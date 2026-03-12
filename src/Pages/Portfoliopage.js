@@ -3,17 +3,17 @@ import React from 'react';
 import { Box, Chip, Container,Link,  Typography,Card,CardContent,Grid,CardMedia } from "@mui/material";
 
 import Footer from "../components/Footer";
-/*import imagenew from '../Assets/Images/imagenew.webp';*/
+// import imagenew from '../Assets/Images/imagenew.webp';
 /*import ArrowForwardIcon from "@mui/icons-material/ArrowForward";*/
 import { useState } from "react";
 /*import media from '../Assets/Images/media.webp';*/
 /*import { useNavigate } from "react-router-dom";*/
-import powerbi from '../Assets/Images/powerbi.webp';
-import erpsoftware from '../Assets/Images/erpsoftware.webp';
-import meru from '../Assets/Images/meru.webp';
-import malware from '../Assets/Images/malware.webp';
-import pyb from '../Assets/Images/pyb.webp';
-import healthcare from '../Assets/Images/healthcare.webp';
+// import powerbi from '../Assets/Images/powerbi.webp';
+// import erpsoftware from '../Assets/Images/erpsoftware.webp';
+// import meru from '../Assets/Images/meru.webp';
+// import malware from '../Assets/Images/malware.webp';
+// import pyb from '../Assets/Images/pyb.webp';
+// import healthcare from '../Assets/Images/healthcare.webp';
 
 
 function Portfoliopage() {
@@ -27,7 +27,7 @@ function Portfoliopage() {
         title:"Mirraki ERP Software",
         desc:"A complete e-commerce solution with inventory management",
         tags:["React","MySql","Cloud","+2 more"],
-        image: erpsoftware,
+        image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772262876/erpsoftware_ujugrb.webp",
        
 
       },
@@ -36,7 +36,7 @@ function Portfoliopage() {
         title:"Healthcare Patient Management System",
         desc:"Streamlining patient care and administrative processes",
         tags:["Angular","Express","PostgreSQL","+2 more"],
-        image: healthcare,
+        image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772262877/healthcare_v2et2u.webp",
 
       },
         {
@@ -44,7 +44,7 @@ function Portfoliopage() {
         title:"Power BI Project",
         desc:"Developed interactive dashboards using Power BI to analyze business data",
         tags:["DAX","Data Preprocessing","+2 more"],
-        image: powerbi,
+        image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772262878/powerbi_ypdt7y.webp",
 
       },
         {
@@ -52,7 +52,7 @@ function Portfoliopage() {
         title:"Meru Process Control",
         desc:"developing and managing process control dashboards to monitor system performance ",
         tags:["ReactNative","Node js","MongoDB","+2 more"],
-        image:meru,
+        image:"https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772262877/meru_nvc4yc.webp",
 
       },
         {
@@ -60,7 +60,7 @@ function Portfoliopage() {
         title:"PYB Android Application",
         desc:"Developed and supported the PYB Android application to provide a user-friendly mobile interface",
         tags:["Vue js","Laravel","MySQL","+2 more"],
-        image: pyb,
+        image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772262878/pyb_ao4vnk.webp",
 
       },
         {
@@ -68,7 +68,7 @@ function Portfoliopage() {
         title:"Malware Detection Software",
         desc:"Developed malware detection software to identify and prevent malicious files and activities in a system",
         tags:["React","Python","PostgreSQL","+2 more"],
-        image: malware,
+        image: "https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772262877/malware_azkpkr.webp",
 
       },
 
@@ -98,7 +98,7 @@ function Portfoliopage() {
   {/* LCP Image */}
   <Box
     component="img"
-    src="https://cosmosdigital.in/static/media/imagenew.add581917f048947874f.webp"
+    src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009827/imagenew_gcpefb.webp"
     alt=""
     loading="eager"
     fetchpriority="high"

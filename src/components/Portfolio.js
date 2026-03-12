@@ -50,13 +50,14 @@ const Portfolio = () => {
 
     sx={{
       maxWidth: { xs: "100%", md: "1439px" },
-      height: { md: "475px" },
+  minHeight: { md: "475px" },
+   
       margin: "0 auto",
       display: "flex",
       flexDirection: "column",
       justifyContent: "flex-start",
        px: { xs: 2, sm: 3, md: 0 },
-      gap:0
+     
     }}
   >
         {/* --- Section Title --- */}
@@ -75,7 +76,7 @@ const Portfolio = () => {
     mx: "auto",
     margin: 0,
     marginBottom: "20px", 
-    pl:"10px"
+    
   }}
 >
           Why Choose Cosmos Digital ?
@@ -97,7 +98,7 @@ const Portfolio = () => {
     mx: "auto",
     margin:0,
     mb:"25px",
-   pl:"50px"
+ 
     
   
 
@@ -115,7 +116,7 @@ const Portfolio = () => {
           
          sx={{
     width: { xs: "100%", md: "1240px" },
-    height: { md: "208px" },
+   minHeight: { md: "208px" },
     mx: "auto",
      mt: { xs: 4, md: "70px" }, 
      
@@ -128,21 +129,19 @@ const Portfolio = () => {
               md={3}
               key={index}
               sx={{
-                   width: { md: "310px" },
-                 flex: { md: "0 0 310px" },
-                   height: { md: "208px" },
+                  mb: { xs: 4, sm: 0 },
+                  minHeight: { md: "208px" },
                    gap:"15px",
                 transition: "all 0.4s ease",
                 "&:hover": {
-                  transform: "translateY(-10px)",
+                  transform: "translateY(5px)",
                 },
               }}
             >
               <Stack
-                spacing={0}
+                spacing={{ xs: 1.5, md: 3}}
                 alignItems="center"
-                sx={{ height: "100%",
-    gap: "20px", 
+                sx={{ 
                   transition: "all 0.3s ease",
                   "&:hover .iconBox": {
                     backgroundColor: "#ABA8F9",
@@ -160,15 +159,15 @@ const Portfolio = () => {
                   sx={{
                     backgroundColor: "#ABA8F94D",
                     borderRadius: "10px",
-                   
                       width: { xs: 60, md: 70 }, 
-                    height: 70,
+                  height: { xs: 60, md: 70 },
                     display: "flex",
                     padding:"15px",
                     gap:"10px",
                     alignItems: "center",
                     justifyContent: "center",
                     transition: "all 0.3s ease",
+                   
                   }}
                 >
                   <Box
@@ -178,9 +177,10 @@ const Portfolio = () => {
                       transition: "all 0.3s ease",
                        width: "37.21px",
                       height: "39.68px",
-                      position: "relative",
-                        top: "0.32px",
-                       left: "1.39px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                       
                     }}
                   >
                     {feature.icon}
@@ -193,6 +193,9 @@ const Portfolio = () => {
                   sx={{
                     fontWeight: "bold",
                     color: "#000000",
+                    textAlign: "center",
+                    fontSize: { xs: "1.1rem", md: "1.25rem" },
+                     mb: { xs: 0.5, md: 0 }, 
                   }}
                 >
                   {feature.title}
@@ -201,7 +204,9 @@ const Portfolio = () => {
                   variant="body2"
                   sx={{
                     color: "#000000",
-                    maxWidth: "250px",
+                   textAlign: "center",
+                     maxWidth: { xs: "100%", md: "250px" },
+                     mt: { xs: 0, md: 0 },
                   }}
                 >
                   {feature.description}

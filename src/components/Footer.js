@@ -232,13 +232,14 @@ const Footer = () => {
               Subscribe to Our Newsletter
             </Typography>
 
-           <Box sx={{ mb: 3 }}>
+           <Box sx={{ mb: 3, width: "100%" }}>
   <TextField
    
     placeholder="Enter your email "
     size="small"
+        fullWidth 
     sx={{
-      width:260,
+      maxWidth: { xs: "100%", sm: 300, md: 260 },
       bgcolor: "white",
       borderRadius: "6px",
     }}
@@ -250,14 +251,17 @@ const Footer = () => {
         <InputAdornment position="end">
           <Button
             sx={{
+               minWidth: { xs: 90, sm: 105 }, 
               background:
                 "linear-gradient(90deg, #3CC0F2 0%, #ABA8F9 100%)",
               color: "white",
               textTransform: "none",
               borderRadius: "6px",
-              px: 1,
-              py: 0,
+             px: { xs: 1.5, sm: 2 },
+              py: 1,
               fontSize: "14px",
+              
+             whiteSpace: "nowrap",
               "&:hover": {
                 background:
                   "linear-gradient(90deg, #7b2cbf 0%, #3a0070 100%)",
@@ -277,19 +281,19 @@ const Footer = () => {
               Contact Info
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8 }}>
-              ask@cosmosdigital.in  
+              info@cosmogeek.in  
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8 }}>
-              support@cosmosdigital.in
+              cosmosdigital44@gmail.in
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8 }}>
-              + (555) 123-4567
+              +91 7756037036
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8 }}>
-              + (555) 987-6543
+              +91 7822839072
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8 }}>
-              123 Innovation Drive, Tech City, TC 12345
+              Krishna Nagar, Maganwadi, wardha.
             </Typography>
           </Grid>
         </Grid>

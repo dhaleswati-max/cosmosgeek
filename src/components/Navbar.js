@@ -15,6 +15,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { NavLink, useNavigate } from "react-router-dom";
+import cosmo from "../Assets/Images/cosmo.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -43,35 +44,46 @@ const Navbar = () => {
         >
           {/* Logo */}
           <Box
-           
-          
+            onClick={() => navigate("/")}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              cursor: "pointer",
+              gap: 1.5
+            }}
           >
-            <Typography
-            onClick={() => navigate("/")}
+            <Box
+              component="img"
+              src={cosmo}
+              alt="Cosmos Logo"
               sx={{
-                fontWeight: 500,
-                color: "#893AEA",
-                fontSize: { xs: "24px", md: "34px" },
-                cursor:"pointer"
-                
+                height: { xs: 40, md: 50 },
+                width: "auto",
+                objectFit: "contain"
               }}
-
-            >
-              Cosmogeek
-            </Typography>
-            <Typography
-            onClick={() => navigate("/")}
-              sx={{
-                fontSize: "20px",
-                color: "#000",
-                mt: "-8px",
-                cursor:"pointer",
-                p:"5px",
-                pl:"2px"
-              }}
-            >
-              Software Solution
-            </Typography>
+            />
+            <Box>
+              <Typography
+                sx={{
+                  fontWeight: 500,
+                  color: "#893AEA",
+                  fontSize: { xs: "24px", md: "34px" },
+                  lineHeight: 1
+                }}
+              >
+                Cosmogeek
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: "14px", md: "20px" },
+                  color: "#000",
+                  mt: 0.5,
+                  lineHeight: 1
+                }}
+              >
+                Software Solution
+              </Typography>
+            </Box>
           </Box>
 
           {/* Desktop Menu */}

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./contact.css";
 import Footer from '../components/Footer';
-import imagenew from '../Assets/Images/imagenew.webp';
-import map from '../Assets/Images/map.webp'
+
 import { Box, Container, Typography } from "@mui/material";
 
 const Contact = () => {
@@ -28,21 +27,24 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Form Data:", formData);
-  try {
-    const response = await fetch("http://localhost:5000/api/contact", {
+    // The Form.io submission endpoint usually requires data to be wrapped in a "data" object.
+    try {
+    // 1️⃣ Save to Form.io
+    await fetch("https://qahxxuqksycmust.form.io/contact/submission", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData)
+      body: JSON.stringify({ data: formData })
     });
 
-    const data = await response.json();
-    console.log(data);
+    // 2️⃣ Send to Zapier
+   const response = await fetch("https://hooks.zapier.com/hooks/catch/26746489/uxdi3j4/", {
+  method: "POST",
+  body: new URLSearchParams(formData)// send the same formData
+});
+   
 
-    // Show thank you message
     setSubmitted(true);
 
-    // Reset form
     setFormData({
       fullName: "",
       email: "",
@@ -55,6 +57,7 @@ const Contact = () => {
 
   } catch (error) {
     console.error("Error submitting form:", error);
+    alert("Submission failed.");
   }
 };
 
@@ -72,10 +75,10 @@ const Contact = () => {
         {/* LCP Image */}
         <Box
           component="img"
-          src="https://cosmosdigital.in/static/media/imagenew.add581917f048947874f.webp"
+          src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009827/imagenew_gcpefb.webp"
           alt=""
           loading="eager"
-          fetchpriority="high"
+          fetchPriority="high"
           sx={{
             position: "absolute",
             inset: 0,
@@ -93,14 +96,14 @@ const Contact = () => {
             zIndex: 2,
             textAlign: "center",
             color: "white",
-            px: 3,
+             px: { xs: 2, sm: 3, md: 3 },
             display:"flex",
             flexDirection:"column",
-            justifyContent:"center",
+            justifyContent: "center",
             alignItems:"center",
            
-            height: { xs: "auto", md: "100vh" },
-            py: { xs: 6, md: 0 },
+             minHeight: "100vh", 
+            
           }}
         >
           <Typography
@@ -108,7 +111,7 @@ const Contact = () => {
             sx={{
               fontWeight: "bold",
               mb: 2,
-              fontSize: { xs: "2.5rem", md: "4rem" },
+              fontSize: { xs: "2rem", sm: "2.3rem", md: "4rem" },
               textShadow: "0 0 20px rgba(255,255,255,0.2)",
               color: "#4169E1",
             }}
@@ -121,7 +124,8 @@ const Contact = () => {
             sx={{
               mb: 3,
               opacity: 0.9,
-              fontSize: { xs: "1.2rem", md: "1.8rem" },
+             fontSize: { xs: "1rem", sm: "1.2rem", md: "1.8rem" },
+              maxWidth: { xs: "95%", sm: "85%", md: "100%" },
               textShadow: "0 0 10px rgba(255,255,255,0.15)",
             }}
           >
@@ -138,7 +142,7 @@ const Contact = () => {
             <span>📧</span>
             <div>
               <h4>Email</h4>
-              <p>support@cosmosdigital.com</p>
+              <p>info@cosmogeek.com</p>
             </div>
           </div>
 
@@ -146,7 +150,7 @@ const Contact = () => {
             <span>📞</span>
             <div>
               <h4>Phone</h4>
-              <p>+91 98765 43210</p>
+              <p>+91 7822839072</p>
             </div>
           </div>
 
@@ -154,14 +158,25 @@ const Contact = () => {
             <span>📍</span>
             <div>
               <h4>Office</h4>
-              <p>123 Innovation Drive, Tech City</p>
+              <p>Cosmos Digital Services ,Krishna Nagar </p>
+              <p>Near sai temple,Maganwadi,Wardha</p>
             </div>
           </div>
 
           <h3 className="location-title">Our Location</h3>
           <h4>Visit our office or contact us remotely. We're here to help.</h4>
-          <img src="https://cosmosdigital.in/static/media/map.98e17d18fef320a0414e.webp"
-           alt="Our location map" className="location-map" />
+          <div style={{ width: "100%", height: "300px" }}>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.3221825406554!2d78.59256697409126!3d20.73773159771304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd47fc6f10ece8b%3A0xee50d998cbd2a816!2sCOSMOS%20DIGITAL%20-%20Software%20Company%20%7C%20Custom%20Software%20%26%20IT%20Solutions%20Company%20In%20Wardha!5e0!3m2!1sen!2sin!4v1773218929638!5m2!1sen!2sin"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+         
         </div>
 
         <div className="contact-form">

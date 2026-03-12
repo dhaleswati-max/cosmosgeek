@@ -152,7 +152,7 @@ const CTA = () => {
       <Container
         maxWidth="md"
         sx={{
-          backgroundImage: `url("https://cosmosdigital.in/static/media/image.cdacfdb9a37c035ccf22.webp")`, // dark blue card
+          backgroundImage: `url("https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772262877/image_eloif5.webp")`, // dark blue card
           borderRadius: "20px",
           py: { xs: 6, md: 8 },
           px: { xs: 4, md: 6 },

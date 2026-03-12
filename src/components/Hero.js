@@ -23,16 +23,19 @@ const [today, setToday]=useState(0);
 const [yesterday, setYesterday]= useState(0);
 
  useEffect(() => {
-    fetch("http://localhost:5000/api/visit/track", {
-    method: "POST",
-  });
+    const API_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
+    
+    fetch(`${API_URL}/api/visit/track`, {
+      method: "POST",
+    }).catch(err => console.log("Tracking error:", err));
 
-  fetch("http://localhost:5000/api/visit/stats")
+    fetch(`${API_URL}/api/visit/stats`)
       .then(res => res.json())
       .then(data => {
         setToday(data.today);
         setYesterday(data.yesterday);
-      });
+      })
+      .catch(err => console.log("Stats fetch error:", err));
   }, []);
 
   const performance =

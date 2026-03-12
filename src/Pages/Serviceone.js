@@ -1,14 +1,6 @@
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material"; 
 import React from "react"; import Footer from "../components/Footer";
  import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'; 
-import image from '../Assets/Images/image.webp';
-import imagenew from '../Assets/Images/imagenew.webp';
-import serviceonimge from '../Assets/Images/serviceoneimg.webp';
-import servicetwoimg from '../Assets/Images/servicetwoimg.webp';
-import servicethreeimg from '../Assets/Images/servicethreeimg.webp';
-import servicefiveimg from '../Assets/Images/servicefiveimg.webp';
-import servicesiximg from '../Assets/Images/servicesiximg.webp';
-import four from '../Assets/Images/four.webp';
     import ArrowForwardIcon from '@mui/icons-material/ArrowForward'; 
     
     import { useNavigate } from "react-router-dom"; 
@@ -72,7 +64,7 @@ import four from '../Assets/Images/four.webp';
   {/* LCP Image */}
   <Box
     component="img"
-    src="https://cosmosdigital.in/static/media/imagenew.add581917f048947874f.webp"
+    src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009827/imagenew_gcpefb.webp"
     alt=""
     loading="eager"
     fetchpriority="high"
@@ -89,12 +81,12 @@ import four from '../Assets/Images/four.webp';
                                      {/* 🌠 Hero Text Content */} 
                                      <Container maxWidth="lg"
                                    sx={{ position: "relative", zIndex: 2, textAlign: "center", 
-                                    color: "white", px: 3, display:"flex",flexDirection:"column", 
+                                    color: "white", px: { xs: 2, md: 3 }, display:"flex",flexDirection:"column", 
                                     justifyContent:"center", alignItems:"center", height:"100vh" }} > 
                                     <Typography 
                                     variant="h2" sx={{ fontWeight: "bold", mb: 2,
                                        fontSize:
-                                       { xs: "2.5rem", md: "4rem" }, 
+                                       { xs: "2rem", sm: "3rem", md: "4rem" }, 
                                        textShadow: "0 0 20px rgba(255,255,255,0.2)", 
                                        background: "linear-gradient(90deg, #4169E1, #38BDF8)",
    WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
@@ -103,7 +95,8 @@ import four from '../Assets/Images/four.webp';
      </Typography> 
      <Typography variant="h5" 
      sx={{ mb: 3, opacity: 0.9, 
-      fontSize: { xs: "1.2rem", md: "1.8rem" }, 
+      fontSize: { xs: "1rem", sm: "1.4rem", md: "1.8rem" }, 
+      maxWidth: "800px",
      textShadow: "0 0 10px rgba(255,255,255,0.15)", }} > 
      We offer comprehensive software development services to help businesses transform their digital 
      presence and operations. 
@@ -112,21 +105,24 @@ import four from '../Assets/Images/four.webp';
        </Box> 
 
        <Box
-        sx={{bgcolor:"#F5F5F5",
-          color:"black",
-         py:{xs:8,md:12} }} > 
-
-       <Container maxWidth="lg" >
-         <Grid container spacing={1}>
+        sx={{
+          bgcolor: "#F5F5F5",
+          color: "black",
+          py: { xs: "40px", md: "70px" },
+          px: { xs: "20px", md: "100px" },
+        }}
+      >
+        <Container maxWidth="lg">
+          <Grid container columnSpacing={{ xs: 2, md: 4.375 }} rowSpacing={{ xs: 2, md: 4 }}>
         <Grid size={{xs:12,md:6}}> 
           <Typography 
           sx=
           {{ mb:1, lineHeight:1.5, color:"Black", 
-          fontWeight:"bold", fontsize:"34px"}}>
+          fontWeight:"600", fontSize: { xs: "20px", md: "24px" }}}>
              ERP Solutions
               </Typography>
            <Typography
-            sx={{ mb:3, lineHeight:1.5, color:"black", fontWeight:"bold", }}>
+            sx={{ mb:3, lineHeight:1.5, color:"black", fontWeight:"500", fontSize: { xs: "16px", md: "18px" }}}>
             Streamline your business operations with custom enterprise resource planning
              solutions that integrate all aspect of your business into a single unified ststem. 
              </Typography> 
@@ -135,7 +131,7 @@ import four from '../Assets/Images/four.webp';
                < FiberManualRecordIcon 
                sx={{ color:"Black", fontSize:10, flexShrink:0, mt:"8px", mr:1.4, }}>
                 </FiberManualRecordIcon> 
-                <Typography sx={{ fontWeight: 300, color: "black", lineHeight: 1.4, m: 0}}>
+                <Typography sx={{ fontWeight: 400, color: "black", lineHeight: 1.4, m: 0, fontSize: { xs: "14px", md: "16px" }}}>
                  {item.description}
                   </Typography> 
                   </Box> 
@@ -143,18 +139,20 @@ import four from '../Assets/Images/four.webp';
                   </Stack> 
                   </Grid> 
                   <Grid size={{xs:12,md:6}} 
-                  sx={{textAlign:"center"}}> 
+                  sx={{textAlign:"center", display: "flex", justifyContent: "center", alignItems: "center"}}> 
                   <Box component="img" 
-                  src="https://cosmosdigital.in/static/media/servicetwoimg.91e31acde4c3c44e3a4e.webp"
+                  src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009828/servicetwoimg_so2e3d.webp"
                   alt="service"
+                   loading="lazy"
+                   decoding="async"
                    sx={{ 
                     width:"100%",
-                     maxWidth:450, 
-                    borderRadius:"8px",
-                       ml:{ xs:0, md:"80px" },
-                       mx:{ xs:"auto", md:0 },
-                     mt:"30px",
-                     boxShadow:"0 0 30px #893AEA40 ", }} >
+                    maxWidth: 440,
+                    height: "293px",
+                    borderRadius:"10px",
+                    ml: { xs: 0, md: "auto" },   
+                    mt: { xs: 4, md: 0 },
+                    boxShadow:"0 0 30px #893AEA40 ", }} >
                       </Box>
                        </Grid>
                         </Grid>
@@ -162,34 +160,45 @@ import four from '../Assets/Images/four.webp';
                           </Box>
                       {/*second container*/}
 
-                       <Box sx={{bgcolor:"#FFFFFF",color:"black", py:{xs:8,md:12} }} >
-                         <Container maxWidth="lg">
-                           <Grid container spacing={1}> 
-                            <Grid size={{xs:12,md:6}}>
+                       <Box
+   sx={{
+     bgcolor: "#FFFFFF",
+     color: "black",
+     py: { xs: "40px", md: "70px" },
+     px: { xs: "20px", md: "100px" },
+   }}
+ >
+   <Container maxWidth="lg">
+     <Grid container columnSpacing={{ xs: 2, md: 4.375 }} rowSpacing={{ xs: 2, md: 4 }}> 
+                            <Grid size={{xs:12,md:6}} 
+                            sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                                <Box
-                                component="img" 
-                               src= "https://cosmosdigital.in/static/media/serviceoneimg.b0252c0a3a480127796c.webp"
-                                alt="service"
-                                 sx=
-                                 {{ width:"100%", 
-                                  maxWidth:450, 
-                                 borderRadius:"8px", 
-                                 ml:{ xs:0, md:"80px" },
-                                 mx:{ xs:"auto", md:0 },
-                                 
-                                 boxShadow:"0 0 30px #893AEA40 ",
-                                  }} >
-                                    </Box>
-                                     </Grid> 
+                                 component="img" 
+                                src= "https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009827/serviceoneimg_s6ta7j.webp"
+                                 alt="service"
+                                  loading="lazy"
+                                  decoding="async"
+                                  sx=
+                                  {{ width:"100%", 
+                                  maxWidth: 440,
+                                  height: "293px",
+                                  borderRadius:"10px",
+                                  ml: { xs: 0, md: 0 },   
+                                  mt: { xs: 4, md: 0 },
+                                  boxShadow:"0 0 30px #893AEA40 ",
+                                   }} >
+                                     </Box>
+                                     </Grid>
                                      <Grid size={{xs:12,md:6}} >
-                                       <Typography sx={{mb: 1, lineHeight: 1.5, color: "black",fontWeight:"bold" }}>
+                                       <Typography sx={{mb: 1, lineHeight: 1.5, color: "black",fontWeight:"600",fontSize: { xs: "20px", md: "24px" } }}>
                                          CRM Developement
                                           </Typography> 
                                           <Typography
                                            sx={{mb: 3,
                                             lineHeight: 1.5, 
                                             color: "black",
-                                             fontWeight:"bold"}} >
+                                             fontWeight:"500",
+                                             fontSize: { xs: "16px", md: "18px" }}} >
                                              Build stronger customer relationships with our tailored
                                               Customer Relationship Management systems that enhance engagement,
                                                streamline sales processes, and boost customer satisfaction. 
@@ -197,9 +206,9 @@ import four from '../Assets/Images/four.webp';
                                                 <Stack spacing={1}>
                                                    {itemtwo.map((item, index) => ( 
                                                     <Box key={index} 
-                                                    sx={{ display: "flex", gap: "6px" }}>
-                                                       <FiberManualRecordIcon sx={{ fontSize: 10, mt: "7px" }} /> 
-                                                       <Typography sx={{ lineHeight: 1.5, color: "black" }}> 
+                                                    sx={{ display: "flex", alignItems: "flex-start" }}>
+                                                       <FiberManualRecordIcon sx={{ color: "black", fontSize: 10, flexShrink: 0, mt: "8px", mr: 1.4 }} /> 
+                                                       <Typography sx={{ lineHeight: 1.5, color: "black" ,fontWeight:"400",fontSize: { xs: "14px", md: "16px" } }}> 
                                                         {item.description}
                                                          </Typography>
                                                           </Box> ))} 
@@ -209,19 +218,28 @@ import four from '../Assets/Images/four.webp';
                                                         </Container> 
                                                         </Box> 
                                       {/*third container*/}
-                          <Box sx={{bgcolor:"#F5F5F5",color:"black",
-                             px:{xs:"20px" ,md:"20px"}, py:"70px" }} >
-                             <Container maxWidth="lg">
-                               <Grid container spacing={1}>
-                                   <Grid size={{xs:12,md:6}}>
-                                        <Typography 
-                                          sx={{ mb:1, lineHeight:1.5, color:"black",
-                                      fontWeight:"bold" }}>
+                          <Box
+   sx={{
+     bgcolor: "#F5F5F5",
+     color: "black",
+     py: { xs: "40px", md: "70px" },
+     px: { xs: "20px", md: "100px" },
+   }}
+ >
+   <Container maxWidth="lg">
+     <Grid container columnSpacing={{ xs: 2, md: 4.375 }} rowSpacing={{ xs: 4, md: 4 }}>
+                                     <Grid size={{xs:12,md:6}}>
+                                          <Typography 
+                                          sx={{ mb:1, lineHeight:1.5, 
+                                            color:"black",
+                                          
+                                      fontWeight:"600",
+                                      fontSize: { xs: "20px", md: "24px" }  }}>
                                       Custom Web Applications 
                                               </Typography>
                                          <Typography
                                       sx={{ mb:3, lineHeight:1.5,
-                               color:"black", fontWeight:"bold", }}
+                               color:"black", fontWeight:"500",fontSize: { xs: "16px", md: "18px" } , }}
                   >Transform your business processes
                              with scalable, secure, 
                          and user-friendly web applications built to 
@@ -235,9 +253,10 @@ import four from '../Assets/Images/four.webp';
                            flexShrink:0, mt:"8px", mr:1.4, }}> 
 
                          </FiberManualRecordIcon>
-                          <Typography sx={{ fontWeight: 300,
+                          <Typography sx={{ fontWeight: 400,
                              color: "black",
-                              lineHeight: 1.4, m: 0}}>
+                              lineHeight: 1.4, m: 0,
+                              fontSize: { xs: "14px", md: "16px" } }}>
                           {item.description}
                            </Typography> 
                            </Box> )
@@ -245,44 +264,74 @@ import four from '../Assets/Images/four.webp';
 
                             </Stack>
                              </Grid> 
-                            <Grid size={{xs:12,md:6}} sx={{textAlign:"center"}}>
-                 <Box component="img"
-                  src= "https://cosmosdigital.in/static/media/servicethreeimg.09eec1602c15400de9b2.webp" alt="service"
-                              sx={{ width:"100%",
-                               maxWidth:450, borderRadius:"8px",
-                                ml:{ xs:0, md:"80px" },
-                                mx:{ xs:"auto", md:0 },
-                                mt:"10px", 
-                                boxShadow:"0 0 30px #893AEA40 ", 
-                                }} ></Box> 
+                            <Grid size={{xs:12,md:6}} sx={{textAlign:"center", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                                                  <Box component="img"
+                                                                    src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009827/servicethreeimg_enyfm1.webp"
+                                                                    alt="service"
+                                                                    loading="lazy"
+                                                                    decoding="async"
+                                                                    sx={{
+                                                                      width: "100%",
+                                                                      maxWidth: 440,
+                                                                      height: "293px",
+                                                                      borderRadius:"10px",
+                                                                      ml: { xs: 0, md: "auto" },   
+                                                                      mt: { xs: 4, md: 0 },
+                                                                      boxShadow: "0 0 30px #893AEA40 ",
+                                                                    }} >
+                                                                  </Box>
                                 </Grid>
                                  </Grid> 
                                  </Container>
                                  </Box> 
                                  {/*Fourth container*/} 
-                                 <Box sx={{bgcolor:"#FFFFFF",color:"black", py:{xs:8,md:12} }} > 
-                                  <Container maxWidth="lg" > <Grid container spacing={1}>
-                                     {/*image*/} 
-                                    <Grid size={{xs:12,md:6}}
-                                    > <Box component="img" 
-                                    src= "https://cosmosdigital.in/static/media/four.0fe5f246695575c781ec.webp" alt="service" 
-                                    sx={{ width:"100%", maxWidth:450, 
-                                    borderRadius:"8px", ml:{ xs:0, md:3 },
-                              mx:{ xs:"auto", md:0 },
-                                     mt:3,
-                                      boxShadow:"0 0 30px #893AEA40 ", }} ></Box> </Grid> <Grid size={{xs:12,md:6}} > 
-                                      <Typography sx={{mb: 1, lineHeight: 1.5, color: "black",fontWeight:"bold" }}> 
-                                        Billing & Accounting Software </Typography> <Typography 
-                                        sx={{mb: 3, lineHeight: 1.5, color: "black", fontWeight:"bold"}} >
-                                           Automate your financial processes with our custom billing and accounting solutions designed to improve accuracy, 
+                                 <Box
+   sx={{
+     bgcolor: "#FFFFFF",
+     color: "black",
+     py: { xs: "40px", md: "70px" },
+     px: { xs: "20px", md: "100px" },
+   }}
+ >
+   <Container maxWidth="lg">
+     <Grid container columnSpacing={{ xs: 2, md: 4.375 }} 
+     rowSpacing={{ xs: 4, md: 4 }}
+      direction={{ xs: "column-reverse", md: "row" }}>
+                                      {/*image*/} 
+                                     <Grid  size={{xs:12,md:6}} 
+                                     sx={{ display: "flex", 
+                                      justifyContent: "center", 
+                                      alignItems: "center" }}
+                                     > <Box component="img" 
+                                     src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772262877/four_ucphk3.webp"
+                                     alt="service" 
+                                     loading="lazy"
+                                     decoding="async"
+                                     sx={{ width:"100%", 
+                                           maxWidth: 440,
+                                           height: "293px",
+                                           borderRadius:"10px",
+                                           ml: { xs: 0, md: 0 },   
+                                           mt: { xs: 4, md: 0 },
+                                      boxShadow:"0 0 30px #893AEA40 ", }} ></Box>
+                                       </Grid>
+                                        <Grid size={{xs:12,md:6}} > 
+                                      <Typography sx={{mb: 1, lineHeight: 1.5, color: "black",
+                                        fontWeight:"600",fontSize: { xs: "20px", md: "24px" }  }}> 
+                                        Billing & Accounting Software </Typography> 
+                                        <Typography 
+                                        sx={{mb: 3, lineHeight: 1.5, color: "black",
+                                         fontWeight:"500",fontSize: { xs: "16px", md: "18px" } }} >
+                                           Automate your financial processes with our custom billing 
+                                           and accounting solutions designed to improve accuracy, 
                               reduce manual work, and provide better financial insights.
                                </Typography> 
                                <Stack spacing={1}>
                                  {itemfour.map((item, index) => 
-                                ( <Box key={index} sx={{ display: "flex", gap: "6px" }}> 
-                                  <FiberManualRecordIcon sx={{ fontSize: 10, mt: "7px" }} />
+                                ( <Box key={index} sx={{ display: "flex", alignItems: "flex-start" }}> 
+                                  <FiberManualRecordIcon sx={{ color: "black", fontSize: 10, flexShrink: 0, mt: "8px", mr: 1.4 }} />
                                    <Typography 
-                                   sx={{ lineHeight: 1.5, color: "black" }}> 
+                                   sx={{ lineHeight: 1.5, color: "black",fontWeight:"400",fontSize: { xs: "14px", md: "16px" }  }}> 
                                    {item.description}
                                     </Typography>
                                      </Box> ))}
@@ -292,66 +341,103 @@ import four from '../Assets/Images/four.webp';
                                       </Container>
                                        </Box> 
                                     {/*fifth Container*/} 
-                                    <Box sx={{bgcolor:"#F5F5F5",color:"black",
-                                       px:{xs:"20px" ,md:"20px"}, py:"70px" }} >
-
-                                    <Container maxWidth="lg">
-                                     <Grid container spacing={1}> 
-                                     <Grid size={{xs:12,md:6}}>
-                                      <Typography sx={{ mb:1, lineHeight:1.5,
-                                         color:"black", fontWeight:"bold" }}>
-                                       Mobile Applications 
-                                       </Typography> 
-                                       <Typography 
-                                       sx={{ mb:3, lineHeight:1.5, color:"black", fontWeight:"bold", }}>
-                                       Engage your customers on-the-go with intuitive and 
-                                       feature-rich mobile applications 
-                                       that provide value and enhance your brand presence 
-                                       in the mobile ecosystem. 
-                                       </Typography>
+                                    <Box
+   sx={{
+     bgcolor: "#F5F5F5",
+     color: "black",
+     py: { xs: "40px", md: "70px" },
+     px: { xs: "20px", md: "100px" },
+   }}
+ >
+   <Container maxWidth="lg">
+     <Grid container columnSpacing={{ xs: 2, md: 4.375 }} rowSpacing={{ xs: 4, md: 4 }}> 
+                                      <Grid size={{xs:12,md:6}}>
+                                       <Typography sx={{ mb:1, lineHeight:1.5,
+                                          color:"black", fontWeight:"600",fontSize: { xs: "20px", md: "24px" }  }}>
+                                        Mobile Applications 
+                                        </Typography> 
+                                        <Typography 
+                                        sx={{ mb:3, lineHeight:1.5, color:"black", 
+                                         fontWeight:"500",
+                                        fontSize: { xs: "16px", md: "18px" }  }}>
+                                        Engage your customers on-the-go with intuitive and 
+                                        feature-rich mobile applications 
+                                        that provide value and enhance your brand presence 
+                                        in the mobile ecosystem. 
+                                        </Typography>
                                         <Stack spacing={1}>
                                          {itemfive.map((item,index)=>( <Box key={index} 
                                          sx={{display:"flex", alignItems:"flex-start",}}>
                                            < FiberManualRecordIcon 
                                            sx={{ color:"black", fontSize:10, flexShrink:0, mt:"8px", mr:1.4, }}>
-                                             </FiberManualRecordIcon> <Typography sx={{ fontWeight: 300, color: "black", lineHeight: 1.4, m: 0}}> 
+                                             </FiberManualRecordIcon> <Typography sx={{ fontWeight: 400,
+                                               color: "black", lineHeight: 1.4, m: 0,fontSize: { xs: "14px", md: "16px" } }}> 
                                           {item.description}
                                            </Typography>
                                            </Box> ) )} 
                                           </Stack> 
                                           </Grid> 
-                                          <Grid size={{xs:12,md:6}} sx={{textAlign:"center"}}>
+                                          <Grid size={{xs:12,md:6}} sx={{textAlign:"center",
+                                             display: "flex", justifyContent: "center",
+                                              alignItems: "center"}}>
                                            <Box component="img" 
-                                           src="https://cosmosdigital.in/static/media/servicefiveimg.6cab9f121c61e892145c.webp" alt="service" 
+                                           src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009827/servicefiveimg_h5h8ko.webp"
+                                           alt="service" 
+                                           loading="lazy"
+                                           decoding="async"
                                            sx={{ width:"100%",
-                                             maxWidth:450,
-                                              borderRadius:"8px"
-                                              ,ml:{ xs:0, md:"80px" },
-                                              mx:{ xs:"auto", md:0 },
-                                             mt:"10px", 
+                                            maxWidth: 440,
+                                            height: "293px",
+                                            borderRadius:"10px",
+                                            ml: { xs: 0, md: "auto" },   
+                                            mt: { xs: 4, md: 0 },
                                             boxShadow:"0 0 30px #893AEA40 ", }} >
                                               </Box> </Grid>
                                                </Grid>
                                                </Container> 
                                             </Box>
-                                             <Box
-                                              sx={{bgcolor:"#FFFFFF",color:"black", py:{xs:8,md:12} }} > 
-                                              <Container maxWidth="lg"> 
-                                                <Grid container spacing={1}> 
-                                                  <Grid size={{xs:12,md:6}}>
-                                                 <Box component="img" src="https://cosmosdigital.in/static/media/servicesiximg.0aa9f99429f1811ad434.webp"alt="service"
-                                                  sx=
-                                                  {{ width:"100%",
-                                                     maxWidth:450, 
-                                                 borderRadius:"8px",
-                                                  ml:{ xs:0, md:3 },
-                                                  mx:{ xs:"auto", md:0 },
-                                                  boxShadow:"0 0 30px #893AEA40 ", }} ></Box> 
-                                                 </Grid> <Grid size={{xs:12,md:6}} > 
-                                                  <Typography sx={{mb: 1, lineHeight: 1.5, color: "black" ,fontWeight:"bold"}}> Digital Marketing 
+{/*sixth */}
+                                        <Box
+   sx={{
+     bgcolor: "#FFFFFF",
+     color: "black",
+     py: { xs: "40px", md: "70px" },
+     px: { xs: "20px", md: "100px" },
+   }}
+ >
+   <Container maxWidth="lg">
+     <Grid container columnSpacing={{ xs: 2, md: 4.375 }} rowSpacing={{ xs: 4, md: 4 }}> 
+                         <Grid 
+                    size={{ xs: 12, md: 6 }} 
+                        sx={{ display: "flex", 
+                        justifyContent: "center", 
+                        alignItems: "center" }}
+>
+                      <Box component="img" 
+                      src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009826/servicesiximg_oo5cdq.webp"alt="service"
+                       loading="lazy"
+                   decoding="async"
+                     sx=
+                    {{ width:"100%",
+                        maxWidth: 440,
+                     height: "293px",
+                    borderRadius:"10px",
+            ml: { xs: 0, md: 0 },   
+                    mt: { xs: 4, md: 0 },
+                    boxShadow:"0 0 30px #893AEA40 ", }} >
+                        </Box> 
+                         </Grid> 
+                                                 <Grid size={{xs:12,md:6}}  > 
+                                                  <Typography
+                                                   sx={{mb: 1, lineHeight: 1.5, color: "black" ,
+                                                   fontWeight:"600",
+                                                   fontSize: { xs: "20px", md: "24px" } }}>
+                                                     Digital Marketing 
                                                     </Typography>
                                                      <Typography
-                                                      sx={{mb: 3, lineHeight: 1.5, color: "black", fontWeight:"bold"}} >
+                                                      sx={{mb: 3, lineHeight: 1.5, color: "black",
+                                                       fontWeight:"500",
+                                                       fontSize: { xs: "16px", md: "18px" } }} >
                                                        Boost your online presence and reach your 
                                                        target audience with our comprehensive digital 
                                                        marketing services designed to increase visibility and 
@@ -360,13 +446,12 @@ import four from '../Assets/Images/four.webp';
                                                          <Stack spacing={1}> {itemsix.map((item, index) => 
                                                         ( <Box key={index} sx=
                                                         {{ display: "flex", 
-                                                        gap: "6px" }}>
+                                                        alignItems: "flex-start" }}>
                                                            <FiberManualRecordIcon sx={
-                                                            { fontSize: 10,
-                                                             mt: "7px" }} /> 
+                                                            { color: "black", fontSize: 10, flexShrink: 0, mt: "8px", mr: 1.4 }} /> 
                                                            <Typography sx=
                                                            {{ lineHeight: 1.5, 
-                                                           color: "black" }}>
+                                                           color: "black" ,fontWeight:"400",fontSize: { xs: "14px", md: "16px" } }}>
                                                              {item.description}
                                                              </Typography>
                                                               </Box> ))} 
@@ -376,34 +461,37 @@ import four from '../Assets/Images/four.webp';
                                                                </Container> 
                                    </Box>
                                            <Container maxWidth="md"
-                                            sx={{ backgroundImage: `url("https://cosmosdigital.in/static/media/image.cdacfdb9a37c035ccf22.webp")`, 
+                                            sx={{ backgroundImage: `url("https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772262877/image_eloif5.webp")`, 
+                                            backgroundSize: "cover",
+                                            backgroundPosition: "center",
                                             borderRadius: "20px", 
                py: { xs: 6, md: 8 },
-                px: { xs: 4, md: 6 },
+                px: { xs: 3, md: 6 },
                  color: "white", textAlign: "center",
-                  mx: "auto", mt:1, mb:6,
+                  mx: "auto", mt: 1, mb: 6,
+                  width: { xs: "90%", md: "100%" },
 
               boxShadow: "0 0 30px rgba(162, 89, 255, 0.2)", }} >
                  {/* Main heading */} 
                    <Typography variant="h4" sx={{ fontWeight: "bold", color:"#FFFFFF", mb: 2,
-                         fontSize: { xs: "1.6rem", md: "2rem" }, }} > 
+                         fontSize: { xs: "1.4rem", sm: "1.8rem", md: "2rem" }, }} > 
                          Ready to grow your business with technology? 
                            </Typography> {/* Subheading */} 
                            <Typography variant="subtitle1" 
-                       sx={{ color: "#d1d1d1", mb: 4, fontSize: { xs: "0.95rem", md: "1rem" }, }} >
+                       sx={{ color: "#d1d1d1", mb: 4, fontSize: { xs: "0.85rem", sm: "0.95rem", md: "1rem" }, }} >
                      Let’s discuss how we can transform your business with our cutting-edge solutions.
                   </Typography> 
                   {/* CTA Button */}
                     <Button variant="contained"
                      onClick={()=>navigate("/contactpage")} 
                        endIcon={<ArrowForwardIcon 
-                        sx={{fontSize:"1.3rem"}}/>} 
+                        sx={{fontSize: { xs: "1.1rem", md: "1.3rem" }}}/>} 
                       sx={{ 
                         background: "linear-gradient(90deg, #38BDF8, #ABA8F9)", color: "#fff", textTransform: "none", 
-                          fontWeight: "600", px: 4,
+                          fontWeight: "600", px: { xs: 3, md: 4 },
                            py: 1.2,
                            borderRadius: "30px",
-                            fontSize: "1rem",
+                            fontSize: { xs: "0.9rem", md: "1rem" },
                              boxShadow:"0 0 20px grey", 
                               "&:hover": { background: "linear-gradient(90deg, #6b5bff, #a259ff)",
                             boxShadow:"0 0 20px grey", transform:"translateY(-3px)" }, }} > 

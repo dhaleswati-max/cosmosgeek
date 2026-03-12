@@ -42,60 +42,60 @@ import bitbucket from  '../Assets/Images/bitbucket.png';
 function Techstack() {
   
 const tech = [
-    { icon: <img src={react}alt="react"  width={50} height={50}/>,
+    { icon: <img src={react}alt="react"  width={50} height={50} loading="lazy" decoding="async"/>,
        title: "React" 
       },
 
-    { icon: <img src={angular}alt="angular"  width={50} height={50} />, 
+    { icon: <img src={angular}alt="angular"  width={50} height={50} loading="lazy" decoding="async" />, 
       title: "Angular"
      },
-    { icon: <img src={vue}alt="react" width={50} height={50} />,
+    { icon: <img src={vue}alt="react" width={50} height={50} loading="lazy" decoding="async" />,
        title: "Vue"
        },
-    { icon: <img src={bootstrap}alt="react" width={50} height={50} />,
+    { icon: <img src={bootstrap}alt="react" width={50} height={50} loading="lazy" decoding="async" />,
        title: "Bootstrap"
        },
 
-    { icon: <img src={flutter}alt="react"  width={50} height={50} />, 
+    { icon: <img src={flutter}alt="react"  width={50} height={50} loading="lazy" decoding="async" />, 
         title: "Flutter" },
-    { icon: <img src={react}alt="react" width={50} height={50}/>,
+    { icon: <img src={react}alt="react" width={50} height={50} loading="lazy" decoding="async"/>,
          title: "React Native" },
   ];
 
   const techbackend = [
-    { icon: <img src={java}alt="react" width={50} height={50} />,
+    { icon: <img src={java}alt="react" width={50} height={50} loading="lazy" decoding="async" />,
        title: "Java" 
       },
 
-    { icon: <img src={python}alt="angular"  width={50} height={50} />, 
+    { icon: <img src={python}alt="angular"  width={50} height={50} loading="lazy" decoding="async" />, 
       title: "Python"
      },
-    { icon: <img src={nodejs}alt="react" width={50} height={50} />,
+    { icon: <img src={nodejs}alt="react" width={50} height={50} loading="lazy" decoding="async" />,
        title: "Nodejs"
        },
-    { icon: <img src={php}alt="react"  width={50} height={50} />,
+    { icon: <img src={php}alt="react"  width={50} height={50} loading="lazy" decoding="async" />,
        title: "PHP"
        },
 
-    { icon: <img src={asp}alt="react"  width={50} height={50}/>, 
+    { icon: <img src={asp}alt="react"  width={50} height={50} loading="lazy" decoding="async"/>, 
         title: "ASP.net" },
 
-    { icon: <img src={csharp}alt="react"  width={50} height={50}/>,
+    { icon: <img src={csharp}alt="react"  width={50} height={50} loading="lazy" decoding="async"/>,
          title: "C#" },
   ];
   const database = [
-    { icon: <img src={mysql}alt="react"  width={50} height={50} />,
+    { icon: <img src={mysql}alt="react"  width={50} height={50} loading="lazy" decoding="async" />,
        title: "MySql" 
       },
 
-    { icon: <img src="https://cosmosdigital.in/static/media/postgresql.a8a0dafc2bad3af204f4.webp"
-      alt="angular" width={50} height={50} />, 
+    { icon: <img src={postgresql}
+      alt="angular" width={50} height={50} loading="lazy" decoding="async" />, 
       title: "PostgreSql"
      },
-    { icon: <img src={oracle}alt="react"  width={50} height={50}/>,
+    { icon: <img src={oracle}alt="react"  width={50} height={50} loading="lazy" decoding="async"/>,
        title: "Oracle"
        },
-    { icon: <img src={mongodb}alt="react" width={50} height={50} />,
+    { icon: <img src={mongodb}alt="react" width={50} height={50} loading="lazy" decoding="async" />,
        title: "MongoDB"
        },
 
@@ -197,7 +197,7 @@ const tech = [
   {/* LCP Image */}
   <Box
     component="img"
-    src="https://cosmosdigital.in/static/media/imagenew.add581917f048947874f.webp"
+    src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009827/imagenew_gcpefb.webp"
     alt=""
     loading="eager"
     fetchpriority="high"
@@ -298,13 +298,13 @@ const tech = [
         {/* Industries Grid */}
         <Grid container spacing={4} justifyContent="center">
           {tech.map((item, index) => (
-            <Grid item xs={12} sm={4} md={2}  key={index}>
+            <Grid item xs={6} sm={4} md={2}  key={index}>
               <Box
                 sx={{
                   backgroundColor: "#ABA8F9",
                   borderRadius: "16px",
                   height:"130px",
-                 width: { xs: "100%", sm: "150px" },
+                 width: { xs: "150px", sm: "150px" },
                   mx:"auto",
                   display:"flex",
                   flexDirection:"column",
@@ -779,11 +779,11 @@ const tech = [
   >
     <Box
       component="img"
-      src="https://cosmosdigital.in/static/media/techstack.be187e1033c3cc6da242.webp"
+      src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009827/techstack_hrgfua.webp"
       alt="Techstack"
       sx={{
           width: { xs: "100%", md: "465px" },
-        height: { xs: "auto", md: "526px" },
+        height: { xs: "auto", md: "500px" },
         objectFit: "cover",
       }}
     />

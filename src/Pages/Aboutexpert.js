@@ -2,14 +2,11 @@ import React from 'react';
 import { Grid, Card, CardMedia, CardContent, Typography } from '@mui/material';
 
 import asmita from '../Assets/Images/asmita.webp';
-import samiksha from '../Assets/Images/samiksha.webp';
 import anshu from '../Assets/Images/anshu.webp';
 import anushka from '../Assets/Images/anushka.webp';
 import swati from '../Assets/Images/swati.webp';
 import arjun from '../Assets/Images/arjun.webp';
 import rishi from '../Assets/Images/rishi.webp';
-import sahil from '../Assets/Images/sahil.webp';
-import anagha from '../Assets/Images/anagha.webp';
 
 
 const team = [
@@ -88,8 +85,14 @@ const Aboutexpert = () => (
                  bgcolor: "#f9f9f9"
               }}
             />
-            <CardContent sx={{ textAlign: 'center', flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <Typography variant="h6" sx={{ fontWeight: 600 }}>{member.name}</Typography>
+            <CardContent sx=
+            {{ textAlign: 'center', flexGrow: 1, display: 'flex', 
+              flexDirection: 'column', 
+            justifyContent: 'center' }}>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                {member.name}
+
+              </Typography>
               <Typography variant="subtitle2" sx={{ color: "#4169E1" }}>
                 {member.role}
               </Typography>

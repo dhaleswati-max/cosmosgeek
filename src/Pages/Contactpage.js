@@ -37,7 +37,7 @@ const Contact = () => {
     });
 
     // 2️⃣ Send to Zapier
-   const response = await fetch("https://hooks.zapier.com/hooks/catch/26746489/uxdi3j4/", {
+   const response= await fetch("https://hooks.zapier.com/hooks/catch/26746489/uxdi3j4/", {
   method: "POST",
   body: new URLSearchParams(formData)// send the same formData
 });
@@ -174,6 +174,7 @@ const Contact = () => {
     allowFullScreen
     loading="lazy"
     referrerPolicy="no-referrer-when-downgrade"
+    title="Google map"
   ></iframe>
 </div>
          

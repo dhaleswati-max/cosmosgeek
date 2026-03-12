@@ -8,7 +8,7 @@ import {
   Typography,
   Stack
 } from "@mui/material";
-import imagenew from  '../Assets/Images/imagenew.png';
+
 import react from '../Assets/Images/react.png';
 import angular from '../Assets/Images/angular.png';
 import vue from '../Assets/Images/vue.png';
@@ -26,15 +26,9 @@ import oracle from '../Assets/Images/oracle.png';
 import postgresql from '../Assets/Images/postgresql.webp'
 import sqlite from '../Assets/Images/sqlite.png';
 import mariadb from '../Assets/Images/mariadb.png';
-import ai from '../Assets/Images/ai.webp';
-import cloud from '../Assets/Images/cloud.webp';
-import NativeScript from '../Assets/Images/NativeScript.webp';
-import swift from '../Assets/Images/swift.webp';
 import github from '../Assets/Images//github.png';
 import gitlab from '../Assets/Images/gitlab.png';
 import docker from '../Assets/Images/docker.png';
-import kubernet from '../Assets/Images/kubernet.webp';
-import techstack from '../Assets/Images/techstack.webp';
 import aws from '../Assets/Images/aws.png';
 import bitbucket from  '../Assets/Images/bitbucket.png';
 

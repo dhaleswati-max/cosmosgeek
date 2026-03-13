@@ -7,13 +7,8 @@ import { useNavigate } from "react-router-dom";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import BoltIcon from '@mui/icons-material/Bolt';
 
-import imagenew_400 from '../Assets/Images/imagenew_400.webp';
-import imagenew_720 from '../Assets/Images/imagenew_720.webp';
-import imagenew_1200 from '../Assets/Images/imagenew_1200.webp';
 
-import heroimagee_400 from '../Assets/Images/heroimagee_400.webp';
-import heroimagee_720 from '../Assets/Images/heroimagee_720.webp';
-import heroimagee_1200 from '../Assets/Images/heroimagee_1200.webp';
+
 
 
 const Hero = () => {
@@ -109,7 +104,7 @@ const [yesterday, setYesterday]= useState(0);
 
   }}
 >
-  Transform Your help
+  Transform Your 
 </Typography>
 
         <Typography
@@ -256,15 +251,8 @@ sx={{
       <Box
 
         component="img"
-          src={heroimagee_720} // default fallback
-  srcSet={`
-    ${heroimagee_400} 480w,
-    ${heroimagee_720} 768w,
-    ${heroimagee_1200} 1200w
-  `}
-  sizes="(max-width: 600px) 90vw,
-         (max-width: 900px) 80vw,
-         500px"
+          src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009826/heroimagee_o3blw2.webp" // default fallback
+ 
   alt="Hero Illustration"
   loading="eager"
   fetchpriority="high"

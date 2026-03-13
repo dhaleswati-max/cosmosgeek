@@ -11,8 +11,9 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-    run:
+    
+defaults:
+  run:
     working-directory: Frontend
     steps:
       - name: Checkout code

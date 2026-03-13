@@ -1,13 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.027fd3c1.css",
-    "main.js": "/static/js/main.49b4a83b.js",
+    "main.js": "/static/js/main.36e9337b.js",
     "static/media/mission.webp": "/static/media/mission.529589e6b5fece9137da.webp",
     "static/media/imagenew.webp": "/static/media/imagenew.add581917f048947874f.webp",
-    "static/media/heroimagee_1200.webp": "/static/media/heroimagee_1200.669beab2178d3708e966.webp",
     "static/media/asmita.webp": "/static/media/asmita.dfbad2253a2862ed363d.webp",
-    "static/media/heroimagee_720.webp": "/static/media/heroimagee_720.cf5e40554d26fd8f10e6.webp",
-    "static/media/heroimagee_400.webp": "/static/media/heroimagee_400.500deb94e6e22ddbf762.webp",
     "static/media/poppins-devanagari-400-normal.woff": "/static/media/poppins-devanagari-400-normal.421fe9869ff4b58e2d7b.woff",
     "static/media/poppins-devanagari-300-normal.woff": "/static/media/poppins-devanagari-300-normal.62c0b320ffa12beb056b.woff",
     "static/media/poppins-devanagari-600-normal.woff": "/static/media/poppins-devanagari-600-normal.1c97cee145d08449ab61.woff",
@@ -20,9 +17,6 @@
     "static/media/poppins-devanagari-500-normal.woff2": "/static/media/poppins-devanagari-500-normal.1b7fc559f2ff15bb4d2f.woff2",
     "static/media/swati.webp": "/static/media/swati.8a03de1ee6d717aae1ea.webp",
     "static/media/rishi.webp": "/static/media/rishi.b16826d4d9de523551f6.webp",
-    "static/media/imagenew_1200.webp": "/static/media/imagenew_1200.635fe736eb1e46316188.webp",
-    "static/media/imagenew_720.webp": "/static/media/imagenew_720.635fe736eb1e46316188.webp",
-    "static/media/imagenew_400.webp": "/static/media/imagenew_400.940f8aa6f75c34d47d33.webp",
     "static/media/anshu.webp": "/static/media/anshu.53b385e00b36d6c203df.webp",
     "static/media/cosmo.png": "/static/media/cosmo.a0b849ff204b40df59bb.png",
     "static/media/anushka.webp": "/static/media/anushka.cdfa3f8f99a2a4c95b08.webp",
@@ -50,10 +44,10 @@
     "static/media/poppins-latin-ext-700-normal.woff2": "/static/media/poppins-latin-ext-700-normal.51cc1e159ae5f0b8ec5c.woff2",
     "index.html": "/index.html",
     "main.027fd3c1.css.map": "/static/css/main.027fd3c1.css.map",
-    "main.49b4a83b.js.map": "/static/js/main.49b4a83b.js.map"
+    "main.36e9337b.js.map": "/static/js/main.36e9337b.js.map"
   },
   "entrypoints": [
     "static/css/main.027fd3c1.css",
-    "static/js/main.49b4a83b.js"
+    "static/js/main.36e9337b.js"
   ]
 }

@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import App from './App';
-import { BrowserRouter } from 'react-router-dom';
-
+//import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from "react-router-dom";
 import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import "@fontsource/poppins/300.css";
@@ -20,11 +20,11 @@ const cache = createCache({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
    <CacheProvider value={cache}>
   <App />
 </CacheProvider>
-    </BrowserRouter>
+    </HashRouter>
     
   </React.StrictMode>
 );

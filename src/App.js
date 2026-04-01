@@ -20,12 +20,6 @@ import Mainchat from './Chat/Mainchat';
 import "./Chat/index.css";
 import './Chat/theme';
 
-
-
-
-
-
-
 const theme = createTheme({
   palette: {
     primary: {
@@ -41,7 +35,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily:  ` "Poppins" `,
+   fontFamily: 'Poppins, sans-serif',
     h2: {
       fontWeight: 700,
     },

@@ -69,7 +69,7 @@ export default function ErpSolution() {
               "Analytics dashboard insights",
               "Real-time inventory management",
             ].map((item) => (
-              <Grid item xs={12} sm={6} key={item}>
+              <Grid size={{ xs: 12, sm: 6 }} key={item}>
                 <Stack direction="row" spacing={1} alignItems="center">
                   <CheckCircleIcon color="primary" fontSize="small" />
                   <Typography variant="body2">{item}</Typography>
@@ -85,7 +85,7 @@ export default function ErpSolution() {
               { value: "+60%", label: "Mobile Conversion" },
               { value: "0.8s", label: "Page Load Speed" },
             ].map((stat) => (
-              <Grid item xs={12} sm={4} key={stat.label}>
+              <Grid size={{ xs: 12, sm: 4 }} key={stat.label}>
                 <Box
                   sx={{
                     border: "1px solid #e0e0e0",

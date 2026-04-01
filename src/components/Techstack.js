@@ -194,7 +194,7 @@ const tech = [
     src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009827/imagenew_gcpefb.webp"
     alt=""
     loading="eager"
-    fetchpriority="high"
+    fetchPriority="high"
     sx={{
       position: "absolute",
       inset: 0,
@@ -292,7 +292,7 @@ const tech = [
         {/* Industries Grid */}
         <Grid container spacing={4} justifyContent="center">
           {tech.map((item, index) => (
-            <Grid item xs={6} sm={4} md={2}  key={index}>
+            <Grid size={{ xs: 6, sm: 4, md: 2 }}  key={index}>
               <Box
                 sx={{
                   backgroundColor: "#ABA8F9",
@@ -378,7 +378,7 @@ const tech = [
         {/* Industries Grid */}
         <Grid container spacing={4} justifyContent="center">
           {techbackend.map((item, index) => (
-            <Grid item xs={12} sm={4} md={2}  key={index}>
+            <Grid size={{ xs: 12, sm: 4, md: 2 }}  key={index}>
               <Box
                 sx={{
                   backgroundColor: "#ABA8F9",
@@ -464,7 +464,7 @@ const tech = [
         {/* Industries Grid */}
         <Grid container spacing={4} justifyContent="center">
           {database.map((item, index) => (
-            <Grid item xs={12} sm={4} md={2}  key={index}>
+            <Grid size={{ xs: 12, sm: 4, md: 2 }}  key={index}>
               <Box
                 sx={{
                   backgroundColor: "#ABA8F9",
@@ -550,7 +550,7 @@ const tech = [
         {/* Industries Grid */}
         <Grid container spacing={4} justifyContent="center">
           {mobiletech.map((item, index) => (
-            <Grid item xs={12} sm={4} md={2}  key={index}>
+            <Grid size={{ xs: 12, sm: 4, md: 2 }}  key={index}>
               <Box
                 sx={{
                   backgroundColor: "#ABA8F9",
@@ -637,7 +637,7 @@ const tech = [
         {/* Industries Grid */}
         <Grid container spacing={4} justifyContent="center">
           {devops.map((item, index) => (
-            <Grid item xs={12} sm={4} md={2}  key={index}>
+            <Grid size={{ xs: 12, sm: 4, md: 2 }}  key={index}>
               <Box
                 sx={{
                   backgroundColor: "#ABA8F9",

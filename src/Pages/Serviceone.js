@@ -1,5 +1,6 @@
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material"; 
-import React from "react"; import Footer from "../components/Footer";
+import React from "react"; 
+import Footer from "../components/Footer";
  import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'; 
     import ArrowForwardIcon from '@mui/icons-material/ArrowForward'; 
     

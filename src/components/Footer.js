@@ -46,7 +46,7 @@ const Footer = () => {
   }}
         >
           {/* Company Info */}
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
             <Box sx={{ lineHeight: 1, mb: 2 ,  display: "flex",
       flexDirection: "column",
       gap: "20px", }}>
@@ -162,7 +162,7 @@ const Footer = () => {
           </Grid>
 
           {/* Quick Links */}
-          <Grid item xs={12} sm={6} md={2}>
+          <Grid size={{ xs: 12, sm: 6, md: 2 }}>
              <Box
     sx={{
       display: "flex",
@@ -194,7 +194,7 @@ const Footer = () => {
           </Grid>
 
           {/* Services */}
-          <Grid item xs={12} sm={6} md={3}
+          <Grid size={{ xs: 12, sm: 6, md: 3 }}
           sx={{  ml: { md: "auto" },
     textAlign: "left",}}>
             <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
@@ -225,7 +225,7 @@ const Footer = () => {
           </Grid>
 
           {/* Newsletter + Contact */}
-          <Grid item xs={12} sm={6} md={4}
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}
           sx={{  ml: { md: "auto" },
     textAlign: "left",}}>
             <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>

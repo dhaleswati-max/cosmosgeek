@@ -17,20 +17,24 @@ const navigate = useNavigate();
 const [today, setToday]=useState(0);
 const [yesterday, setYesterday]= useState(0);
 
- useEffect(() => {
+  useEffect(() => {
+    const enabled = process.env.REACT_APP_ENABLE_TRACKING === "true";
+    if (!enabled) return;
     const API_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
-    
+    const abort = new AbortController();
     fetch(`${API_URL}/api/visit/track`, {
       method: "POST",
-    }).catch(err => console.log("Tracking error:", err));
+      signal: abort.signal,
+    }).catch(() => {});
 
-    fetch(`${API_URL}/api/visit/stats`)
+    fetch(`${API_URL}/api/visit/stats`, { signal: abort.signal })
       .then(res => res.json())
       .then(data => {
         setToday(data.today);
         setYesterday(data.yesterday);
       })
-      .catch(err => console.log("Stats fetch error:", err));
+      .catch(() => {});
+    return () => abort.abort();
   }, []);
 
   const performance =
@@ -58,7 +62,7 @@ const [yesterday, setYesterday]= useState(0);
  src="https://res.cloudinary.com/dpqq2vxc6/image/upload/v1772009827/imagenew_gcpefb.webp"
     alt=""
     loading="eager"
-    fetchpriority="high"
+    fetchPriority="high"
  
 
     sx={{
@@ -255,7 +259,7 @@ sx={{
  
   alt="Hero Illustration"
   loading="eager"
-  fetchpriority="high"
+  fetchPriority="high"
         sx={{
           mt:"95px",
           width: "100%",

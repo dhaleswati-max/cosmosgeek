@@ -91,7 +91,7 @@ const CTA = () => {
         {/* Industries Grid */}
         <Grid container spacing={4} justifyContent="center">
           {industries.map((item, index) => (
-            <Grid item xs={12} sm={4} md={2}  key={index}>
+            <Grid size={{ xs: 12, sm: 4, md: 2 }}  key={index}>
               <Box
                 sx={{
                  

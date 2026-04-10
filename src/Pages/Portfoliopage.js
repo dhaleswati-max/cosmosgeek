@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Chip, Container,Link,  Typography,Card,CardContent,Grid,CardMedia } from "@mui/material";
+import { Box, Chip, Container, Typography,Card,CardContent,Grid,CardMedia } from "@mui/material";
 
 import Footer from "../components/Footer";
 // import imagenew from '../Assets/Images/imagenew.webp';

@@ -37,7 +37,7 @@ const Contact = () => {
     });
 
     // 2️⃣ Send to Zapier
-   const response= await fetch("https://hooks.zapier.com/hooks/catch/26746489/uxdi3j4/", {
+   await fetch("https://hooks.zapier.com/hooks/catch/26746489/uxdi3j4/", {
   method: "POST",
   body: new URLSearchParams(formData)// send the same formData
 });

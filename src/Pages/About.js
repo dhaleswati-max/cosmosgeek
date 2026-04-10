@@ -10,7 +10,7 @@ import Aboutdevelopment from "./Aboutdevelopment";
 import Aboutexpert from "./Aboutexpert";
 import Footer from "../components/Footer";
 import imagenew from '../Assets/Images/imagenew.webp';
-import mission from '../Assets/Images/mission.webp';
+
 import { useNavigate } from "react-router-dom";
 
 const About = () => {
